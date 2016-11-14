@@ -28,20 +28,25 @@
           Atraves do Falaê é possivel postar mensagens. ler o que seus amigos estão dizendo e curtir odiar as mensagens.</span>
       </div>
     </div>
-    <div class="form">
+    <div  class="form">
       <div class="thumbnail"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/hat.svg"/></div>
-      <form class="register-form">
-        <input type="text" placeholder="E-mail"/>
-        <input type="text" placeholder="Nick"/>
-        <input type="password" placeholder="Senha"/>
-        <input type="text" placeholder="Status"/>
-        <button>Criar</button>
+      <form method="post" action="adduser.php" class="register-form">
+        <input type="text" name="email" placeholder="E-mail"/>
+        <input type="text" name="nick" placeholder="Nick"/>
+        <input type="password" name="pwd" placeholder="Senha"/>
+          <input type="text" name="picture" placeholder="Foto"/>
+        <input type="text" name="status" placeholder="Status"/>
+          <input type="submit" value="Criar">
+        <!-- <button >Criar</button> -->
         <p class="message">Tem uma conta? <a href="#">Entre</a></p>
       </form>
-      <form class="login-form">
-        <input type="text" placeholder="E-mail"/>
-        <input type="password" placeholder="Senha"/>
-        <button>Entrar</button>
+
+
+      <form method="post" action="./classes/authenticate.php" class="login-form">
+        <input type="text"  name="email" placeholder="E-mail"/>
+        <input type="password" name="pwd" placeholder="Senha"/>
+          <input type="submit" value="Entrar">
+
         <p class="message">Não esta registrado? <a href="#">Cadastre-se</a></p>
       </form>
     </div>
