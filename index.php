@@ -20,10 +20,10 @@
 </head>
 
 <body>
-  
+
     <div class="container">
       <div class="info">
-		
+
         <h1>Falaê</h1><span>Falaê e um sistema de comunicação desenvolvido pelos alunos da fatec de Osasco.<br/>
           Atraves do Falaê é possivel postar mensagens. ler o que seus amigos estão dizendo e curtir odiar as mensagens.</span>
       </div>
@@ -43,6 +43,7 @@
 
 
       <form method="post" action="./classes/authenticate.php" class="login-form">
+          <label class="lab"><?php  echo isset($_GET["status"])? $_GET["status"]:""; ?></label>
         <input type="text"  name="email" placeholder="E-mail"/>
         <input type="password" name="pwd" placeholder="Senha"/>
           <input type="submit" value="Entrar">

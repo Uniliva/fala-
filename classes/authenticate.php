@@ -12,18 +12,17 @@ include_once('user.php');
 session_start();
 
 // Recupera o login
-$login = isset($_POST["login"]) ? addslashes(trim($_POST["login"])) : FALSE;
+$login = isset($_POST["email"]) ? $_POST["email"] : FALSE;
 // Recupera a senha, a criptografando em MD5
-$senha = isset($_POST["senha"]) ? trim($_POST["senha"]) : FALSE;
+$senha = isset($_POST["pwd"]) ? $_POST["pwd"]: FALSE;
 
-// Usuário não forneceu a senha ou o login
+// Usuário não forneceu a senha ou o email
 if(!$login || !$senha)
 {
-    alert( "Você deve digitar sua senha e login!");
-    exit;
+    header("Location: ../index.php?status=Forneneça o email e senha!");
 }else{
     $u = new UserVO;
-    $u = findByEmail($_POST[$login]);
+    $u =  UserDAO::findByEmail($_POST["email"]);
 
     if (!empty($u->email)) {
         if(!strcmp($senha, $u->pwd))
@@ -31,23 +30,26 @@ if(!$login || !$senha)
     // TUDO OK! Agora, passa os dados para a sessão e redireciona o usuário
             $_SESSION["email"] =$u->email;
             $_SESSION["pwd"]= $u->pwd;
-        header("Location: posts.php");
-        exit;
+        header("Location: ../posts.php");
       }
       // Senha inválida
     else
         {
-            alert( "Senha inválida!");
-            exit;
+            unset($_SESSION["email"]);
+            unset($_SESSION["pwd"]);
+           header("Location: ../index.php?status=Senha inválida!");
+
         }
     }// Login inválido
     else
     {
-        alert( "O login fornecido por você é inexistente!");
-        exit;
+        unset($_SESSION["email"]);
+        unset($_SESSION["pwd"]);
+        header("Location: ../index.php?status=O login fornecido não é valido!");
     }
 
 
 }
+?>
 
 
