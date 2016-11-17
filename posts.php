@@ -1,14 +1,33 @@
 <?php
     include("./classes/post.php");
     include("./classes/userpost.php");
+    session_start();
 ?>
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>Últimos Posts | Falaê</title>
+        <title>Posts | Falaê</title>
+
+        <link rel="stylesheet" href="./css/posts.css">
+
     </head>
     <body>
+    <div class="faixa">
+        <div class="falae">
+            <img class="image" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/hat.svg" alt="">
+            <div class="ch1">Falaê</div>
+        </div>
+        <div class="perfil">
+
+            <img src="<?php echo $_SESSION["picture"] ?>" alt="">
+            <div> <?php echo $_SESSION["nick"] ?></div>
+            <div><?php echo $_SESSION["status"] ?></div>
+
+        </div>
+    </div>
+
+
         <h1>Postar</h1>
         
         <form method="post" action="addpost.php">
