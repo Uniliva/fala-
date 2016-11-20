@@ -30,9 +30,15 @@ if(!$login || !$senha)
     // TUDO OK! Agora, passa os dados para a sessão e redireciona o usuário
             $_SESSION["email"] =$u->email;
             $_SESSION["pwd"]= $u->pwd;
+<<<<<<< HEAD
             $_SESSION["picture"]= $u->picture;
             $_SESSION["nick"]= $u->nick;
             $_SESSION["status"]= $u->status;
+=======
+            $_SESSION["nick"]=  $u->nick ;
+            $_SESSION["picture"]=  $u->picture;
+            $_SESSION["status"]=  $u->status ;
+>>>>>>> origin/master
         header("Location: ../posts.php");
       }
       // Senha inválida
