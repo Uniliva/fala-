@@ -1,12 +1,19 @@
 body{
     background-color: #F5F5F5;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
 }
 .falae{
     display: block;
     width: 100%;
     height: 70px;
-    background-color: #EF3B3A ;
+    background-color: #286584 ;
     margin: 0px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+    position: fixed;
+    top: 0px;
+    float: inherit;
 
 }
 
@@ -18,7 +25,7 @@ body{
     padding-right: 20px;
 }
 .falae .ch1{
-    font-family: "Roboto", sans-serif;
+    font-family: 'Tillana', cursive;
     font-size: 20pt;
     font-weight: 500;
     width: 60px;
@@ -29,19 +36,125 @@ body{
     bottom: 25%;
     color: white;
 }
+html, body { margin:0; height: 100%;}
 .perfil {
-    display: block;
     width: 230px;
     height: 100%;
-    background-color: #EF3B3A ;
-    margin: 0px;
+    background-color: #286584 ;
+    position: fixed;
+    left: 0px;
+    top: 74px;
+    display: inline;
+    float: left;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+
+
 
 }
+
 .perfil img {
     width: 200px;
     height: 200px;
     padding: 10px;
     margin: 0px;
     border-radius: 50%;
+    border: solid 1px #286584 ;
+    box-shadow: 1px 1px  #F5F5F5;
+
+}
+.nick{
+    font-family: 'Tillana', cursive;
+     font-size: 16pt;
+     text-align: center;
+     color: #FFFFFF;
+
+ }
+.status{
+    font-family: 'Tillana', cursive;
+    font-size: 12pt;
+    text-align: center;
+    color: #FFFFFF;
+
+}
+
+
+.postar{
+    font-family: 'Tillana', cursive;
+    font-size: 10pt;
+    position: fixed;
+    top: 85px;
+    left: 40%;
+    width: 550px;
+    height: 120px;padding: 10px;
+    filter: alpha(opacity=65);
+    border: 1px solid rgba(0,0,0,0.9);
+    box-shadow: 1px 1px 1px  rgba(0,0,0,0.9);
+
+
+
+}
+.postar p {
+    font-size: 12pt;
+    font-weight: 800;
+    margin: 0px;
+
+}
+.oculo{
+    display: none;
+}
+textarea{
+    width: 90%;
+    height: 50px;
+    border-radius: 5px;
+    margin-top: 0px;
+}
+.btnEnviar {
+    font-family: 'Tillana', cursive;
+    font-size: 12pt;
+    background-color: #286584 ;
+    color: #FFFFFF;
+    width: 100px;
+    border: 0px;
+    box-shadow: 1px 1px 1px  rgba(0,0,0,0.9);
+    position: relative;
+    left: 74%;
+}
+
+.central{
+    width: 40%;
+    margin: 0px;
+
+}
+
+.postagem{
+    font-family: 'Tillana', cursive;
+    font-size: 10pt;
+    position: relative;
+    top: 250px;
+    left: 40%;
+    width: 550px;
+    margin-top: 20px;
+    padding: 10px;
+    filter: alpha(opacity=65);
+    border: 1px solid rgba(0,0,0,0.9);
+    box-shadow: 1px 1px 1px  rgba(0,0,0,0.9);
+
+
+
+}
+
+.postagemImg{
+    width: 60px;
+    height: 60px;
+    margin: 0px;
+    box-shadow: 1px 1px 1px  rgba(0,0,0,0.9);
+
+}
+.postagemImgReacion{
+    width: 40px;
+    height: 40px;
+    margin: 0px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 1px  rgba(0,0,0,0.9);
 
 }

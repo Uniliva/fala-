@@ -1,4 +1,5 @@
 /* Form */
+
 .form {
   position: relative;
   z-index: 1;
@@ -13,7 +14,7 @@
   text-align: center;
 }
 .form .thumbnail {
-  background: #EF3B3A;
+  background: #286584;
   width: 150px;
   height: 150px;
   margin: 0 auto 30px;
@@ -50,7 +51,7 @@
 }
 .form  input[type=submit]{
   outline: 0;
-  background: #EF3B3A;
+  background: #286584;
   width: 100%;
   border: 0;
   padding: 15px;
@@ -67,7 +68,7 @@
 /*
 .form button {
   outline: 0;
-  background: #EF3B3A;
+  background: #286584;
   width: 100%;
   border: 0;
   padding: 15px;
@@ -87,7 +88,7 @@
   font-size: 12px;
 }
 .form .message a {
-  color: #EF3B3A;
+  color: #286584;
   text-decoration: none;
 }
 .form .register-form {
@@ -125,7 +126,7 @@
   text-decoration: none;
 }
 .container .info span .fa {
-  color: #EF3B3A;
+  color: #286584;
 }
 
 /* END Form */
